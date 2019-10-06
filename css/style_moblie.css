@@ -1,0 +1,150 @@
+/*
+theme name:陈永森的自制主题;
+theme url:127.0.0.1;
+description:为产品经理学习而生;
+version:1.0;
+author:johnson;
+tags:简洁、优雅;
+*/
+
+/* 消除浮动,将<div class='clear'></div>添加到父区块中,与【欲消除浮动】的区块同级 */
+.clear{clear:both;font-size:0px;line-height:0px;height:0px;}
+
+/* 总体 */
+*{
+	padding:0;
+	margin:0;
+	/* border:2px solid rgb(140,180,222); */
+	margin-top: 0px;
+	line-height: 30px;
+}
+
+/* 主体 */
+body {
+	/* border:2px solid red; */
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+    font-size: 15px;
+    background-color:#f6f6f6;
+    -webkit-tap-highlight-color: rgba(26,26,26,0);
+	margin:0;
+}
+/* 链接修改 */
+a{font-style: normal;text-decoration: none;font-weight: bold;}
+a:link {color:black}
+a:visited{color:black;}
+a:hover{color:rgb(140,180,222);}
+
+
+/* 列表修改 */
+li{list-style: none;}
+
+
+
+/* 页头 */
+#header{
+	background-color: white;
+	top:0rem;
+    width: 100%;
+	margin-top: 0rem;
+	position: fixed;
+	float: left;
+	z-index: 999;
+	font-family: "Noto Serif",serif;
+	box-shadow: 1px 1px 10px #888888;
+	/* position: fixed; */
+	}
+	#list_left{float: left;width:25%;display: inline-block;}
+		#list_left img{margin: 15px;opacity: 0.6;}
+	#header_left{
+		float: left;
+		text-align: center;
+		width:50%;
+		display: inline-block;
+		}
+	#list_right{float: right;width:25%;display: inline-block;text-align: right;}
+		#list_right img{margin: 15px;opacity: 0.7;}
+	#header_right{
+		display: block;
+		/* border: 1px solid #000000; */
+		/* position: absolute; */
+		background-color: #FFFFFF;
+		width: 100%;
+		display: none;
+		}
+		/* 二级菜单制作！！！ */
+		#header_right ul{float: left;}
+		#header_right ul li{font-size:19px;margin: 1rem;}
+		#header_right ul li ul{text-decoration: none;float:right;border: 1px solid #000000;display: none;}
+		#header_right ul li ul li{font-size:15px;background-color: #FFFFFF;}
+		#header_right ul li a:visited ul{display: block;}
+		
+/* 页中 */
+#container{
+	background-color:#f6f6f6;
+	margin-top:5rem ;
+	}
+	/* 文章 */
+	/* #post{float:left;width:100%;background-color: #f6f6f6;;border-radius: 10px;box-shadow:1px 1px 5px #f6f6f6;} */
+		/* 文章列表 */
+		.post_list{padding:1rem;margin:1rem;background-color:white;border-radius: 10px;box-shadow:1px 1px 5px #f6f6f6;border:1px solid #888888;}
+			.post_list_title{font-size: 19px;border-bottom: 2px solid #f6f6f6;}
+				.post_list_title a{color:#475669;}
+					.post_list_title a:hover{color:rgb(140,180,222);}
+			.post_list_content{text-overflow: ellipsis;margin:10px;}
+			#details{border-top:2px  solid #F6F6F6;}
+			#details span{border-left:  2px solid #f6f6f6;padding: 3px;}
+			#details .post_list_time{border-left:none;}
+				.post-categories{background-color: black;padding:0px 5px;display: inline-block;margin:5px 0px;font-family: "Noto Serif",serif;}
+					.post-categories a{color: #FFFFFF;}
+		/* 文章切换 */
+		#post_switch{padding:10px;margin:10px;background-color:white;border-radius: 10px;box-shadow:1px 1px 5px #888888;}
+		
+	/* 侧边栏 */	
+	#sidebar{
+		background-color:#F6F6F6;
+		position: fixed;
+		z-index: 1000;
+		bottom:0;/* 关键是top和bottpm中至少要有一个为0方可解决fixed不能滚动的问题 */
+		top: 10%;
+		right:0rem;
+		overflow: scroll;
+		/* float: right; */
+		/* transform: translateX(22.5rem); */
+		display: none;
+		}
+		/* 插件 */
+		.sidebar_widget{background-color:white;padding: 10px 10px;margin:10px 10px;border:1px solid #888888;}
+		.sidebar_widget:hover{box-shadow: 5px 5px 20px #475669;margin-bottom: 30px;transform:translate(-10px);}
+		#wp_info{background-color:white;padding: 10px 10px;margin:10px 10px;z-index: -1;box-shadow: 3px 3px 10px #888888;}
+		#title{border-bottom:1px solid #f6f6f6 ;font-size:18px;font-weight: bold;color:#475669;}
+		.sidebar_widget h3{border-bottom:2px solid #f6f6f6 ;font-size:18px;color:#475669;}
+		.sidebar_widget ul li a{font-weight:bold; font-size: 14px;font-family: "Noto Serif",serif;font-weight: bold;}
+		.screen-reader-text{}
+		/* 猫 */
+		#cat{background-color:white;padding: 10px 10px;margin:10px 10px;border-radius: 10px;text-align:center;}
+	
+/* 页脚 */
+#footer{
+	text-align: center;
+	box-shadow: -1px -1px 10px #888888;
+	font-family: "Noto Serif",serif;
+	margin-top: 1rem;
+	}
+
+/* single页*/
+	/* 文章切换 */
+	#pre_post{float: left;}
+	#next_post{float:right;}
+	/* 评论详情 */
+	.comment_title{font-size: 1rem;font-weight: bold;border-bottom: 2px solid #F6F6F6;color:#475669;}
+	#comments_box{padding:10px;margin:10px;background-color:white;border-radius: 10px;box-shadow:1px 1px 5px #f6f6f6;}
+		.comment-body{margin:10px;border-bottom: 2px solid #F6F6F6;}
+			/* .commentmetadata{float:right;color:#f6f6f6;} */
+			/* .reply{float: right;} */
+	#respond {padding:10px;margin:10px;background-color:white;border-radius: 10px;box-shadow:1px 1px 5px #f6f6f6;}
+	#reply-title{border-bottom: 2px solid #F6F6F6;font-size: 19px;color:#475669;}
+	.children{width:80%;float:right;display:relative;}
+	.comment p{margin: 5px;}
+	
+/* 404 */
+	.lost{padding:10px;margin:10px;background-color:white;border-radius: 10px;box-shadow:1px 1px 5px #f6f6f6;height:100px;}

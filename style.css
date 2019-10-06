@@ -1,0 +1,362 @@
+/*
+theme name:陈永森的自制主题;
+theme url:127.0.0.1;
+description:为产品经理学习而生;
+version:1.0;
+author:johnson;
+tags:简洁、优雅;
+*/
+
+/* 消除浮动,将<div class='clear'></div>添加到父区块中,与【欲消除浮动】的区块同级 */
+.clear {
+	clear: both;
+	font-size: 0px;
+	line-height: 0px;
+	height: 0px;
+}
+
+/* 总体 */
+* {
+	padding: 0;
+	margin: 0;
+	/* border:2px solid rgb(140,180,222); */
+	margin-top: 0px;
+	line-height: 30px;
+}
+
+/* 主体 */
+body {
+	/* border:2px solid red; */
+	font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+	font-size: 15px;
+	background-color: #f5f6f7;
+	-webkit-tap-highlight-color: rgba(26, 26, 26, 0);
+
+	margin: 0;
+
+}
+
+/* 链接修改 */
+a {
+	font-style: normal;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:link {
+	color: black
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: rgb(140, 180, 222);
+}
+
+
+/* 列表修改 */
+li {
+	list-style: none;
+}
+
+
+
+/* 页头 */
+#header {
+	/* border:2px solid red; */
+	background-color: white;
+	/* height: 100%; */
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	z-index: 9;
+	font-family: "Noto Serif", serif;
+	box-shadow: 3px 3px 5px #dbdbdb;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#list_left {
+	display: none;
+}
+
+#list_right {
+	display: none;
+}
+
+#header_left {
+	text-align: center;
+	margin-left: 5rem;
+}
+
+/* #blog_name{border:2px solid blue;margin: 0;display: inline-flex; } */
+#blog_icon {
+	margin: 10px 30px;
+	font-size: 24px;
+	transform: translate(-50px);
+}
+
+#blog_name {
+	margin: 0 100px;
+	transform: translate(-50px);
+}
+
+#header_right {
+
+	/* border:2px solid blue; */
+}
+
+/* 二级菜单制作！！！ */
+#header_right ul li {
+	width: 100px;
+	height: 30px;
+	float: right;
+	display: block;
+	text-align: center;
+	font-size: 19px;
+}
+
+/*float让所有a标签在同一行显示、block让a元素占满整个li */
+#header_right ul li ul {
+	display: none;
+	text-decoration: none;
+}
+
+#header_right ul li ul li {
+	color: red;
+	font-size: 15px;
+	z-index: 99;
+	background-color: #FFFFFF;
+}
+
+#header_right ul li:hover ul {
+	display: block;
+}
+
+/* 页中 */
+#container {
+	/*! border: #0000FF; */
+	/*! background-color: #f6f6f6; */
+	border-radius: ;
+	position: relative;
+	z-index: 1;
+	padding: 0px 50px;
+	margin: 30px 100px;
+	border-radius: 30px;
+}
+
+/* 文章 */
+#post {
+	float: left;
+	width: 70%;
+	/*! background-color: #f6f6f6; */
+	;
+	border-radius: 10px;
+	/*! box-shadow: 1px 1px 5px #f6f6f6; */
+}
+
+/* 文章列表 */
+.post_list {
+	margin: 10px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px #dbdbdb;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(150, 150, 150, 0.3);
+	padding: 30px;
+}
+
+.post_list_title {
+	font-size: 19px;
+	border-bottom: 2px solid #f6f6f6;
+}
+
+.post_list_title a {
+	color: #475669;
+}
+
+.post_list_title a:hover {
+	color: rgb(140, 180, 222);
+}
+
+.post_list_content {
+	text-overflow: ellipsis;
+	margin: 10px;
+}
+
+#details {
+	border-top: 2px solid #F6F6F6;
+}
+
+#details span {
+	border-left: 2px solid #f6f6f6;
+	padding: 3px;
+}
+
+#details .post_list_time {
+	border-left: none;
+}
+
+.post-categories {
+	background-color: black;
+	padding: 0px 5px;
+	display: inline-block;
+	margin: 5px 0px;
+	font-family: "Noto Serif", serif;
+}
+
+.post-categories a {
+	color: #FFFFFF;
+}
+
+/* 文章切换 */
+#post_switch {
+	padding: 0 10px;
+	margin: 10px;
+	background-color: white;
+	border-radius: 4px;
+}
+
+/* 侧边栏 */
+#sidebar {
+	float: right;
+	width: 30%;
+	/*! background-color: #f6f6f6; */
+	/*! box-shadow: 1px 1px 5px #f6f6f6; */
+}
+
+/* 插件 */
+.sidebar_widget {
+	background-color: white;
+	padding: 30px;
+	margin: 10px 10px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+
+.sidebar_widget:hover {
+	box-shadow: 5px 5px 20px #475669;
+	margin-bottom: 30px;
+	transform: translate(-10px);
+	/*! padding: 30px; */
+}
+
+#wp_info {
+	background-color: white;
+	padding: 30px;
+	margin: 10px 10px;
+	z-index: -1;
+	box-shadow: 3px 3px 5px #dbdbdb;
+	border-radius: 4px;
+}
+
+#title {
+	border-bottom: 1px solid #f6f6f6;
+	font-size: 18px;
+	font-weight: bold;
+	color: #475669;
+}
+
+.sidebar_widget h3 {
+	border-bottom: 2px solid #f6f6f6;
+	font-size: 18px;
+	color: #475669;
+}
+
+.sidebar_widget ul li a {
+	font-weight: bold;
+	font-size: 14px;
+	font-family: "Noto Serif", serif;
+	font-weight: bold;
+}
+
+.screen-reader-text {}
+
+/* 猫 */
+#cat {
+	background-color: white;
+	padding: 10px 10px;
+	margin: 10px 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+/* 页脚 */
+#footer {
+	text-align: center;
+	box-shadow: 3px 3px 5px #dbdbdb;
+	font-family: "Noto Serif", serif;
+	background-color: white;
+	padding: 10px;
+}
+
+/* single页*/
+/* 文章切换 */
+#pre_post {
+	float: left;
+}
+
+#next_post {
+	float: right;
+}
+
+/* 评论详情 */
+.comment_title {
+	font-size: 1rem;
+	font-weight: bold;
+	border-bottom: 2px solid #F6F6F6;
+	color: #475669;
+}
+
+#comments_box {
+	padding: 10px;
+	margin: 10px;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 1px 1px 5px #f6f6f6;
+}
+
+.comment-body {
+	margin: 10px;
+	border-bottom: 2px solid #F6F6F6;
+}
+
+/* .commentmetadata{float:right;color:#f6f6f6;} */
+/* .reply{float: right;} */
+#respond {
+	padding: 10px;
+	margin: 10px;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 1px 1px 5px #f6f6f6;
+}
+
+#reply-title {
+	border-bottom: 2px solid #F6F6F6;
+	font-size: 19px;
+	color: #475669;
+}
+
+.children {
+	width: 80%;
+	float: right;
+	display: relative;
+}
+
+.comment p {
+	margin: 5px;
+}
+
+/* 404 */
+.lost {
+	padding: 10px;
+	margin: 10px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px #f6f6f6;
+	height: 100px;
+}
